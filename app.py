@@ -5,9 +5,11 @@ import dash_bootstrap_components as dbc
 chatbot_list = {f"Chatbot {i+1}": f"def chatbot_{i+1}():\n    return 'Aquest és el codi del chatbot {i+1}'"
                 for i in range(20)}
 
-# Crear l'aplicació Dash
 # Crear l'aplicació
-app = Dash(__name__)
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server  # Necessari per Gunicorn
+
+app.title = "Els chatbots de Vinyes Velles"
 
 # Disseny de la interfície d'usuari
 app.layout = html.Div([
@@ -65,6 +67,6 @@ def interact_with_chatbot(n_clicks, selected_bot, user_message):
     
     return chatbot_response, chatbot_code
 
-# Executa l'aplicació
-if __name__ == '__main__':
+# Executar l'aplicació en mode local
+if __name__ == "__main__":
     app.run_server(debug=True)
