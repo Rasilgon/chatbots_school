@@ -6,8 +6,8 @@ chatbot_list = {f"Chatbot {i+1}": f"def chatbot_{i+1}():\n    return 'Aquest és
                 for i in range(20)}
 
 # Crear l'aplicació Dash
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-app.title = "Els chatbots de Vinyes Velles"
+# Crear l'aplicació
+app = Dash(__name__)
 
 # Disseny de la interfície d'usuari
 app.layout = html.Div([
