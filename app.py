@@ -3,22 +3,22 @@ import dash_bootstrap_components as dbc
 
 # Llista de chatbots amb noms i descripcions
 chatbots = {
-    "ChatBotPy": "parla sobre qualsevol cosa",
-    "FutBot": "parla de futbol",
-    "Cabechat": "parla sobre el bàsquet i és dels Warriors",
-    "Walter": "parla sobre el Barça",
-    "Hades": "sobre música del gènere urbà 2024",
-    "Thebot": "pot ampliar el teu coneixement sobre qualsevol religió",
-    "SantiBot": "t'ajuda amb teoria musical i composició",
-    "RossoX": "parla sobre F1 i li agrada Ferrari",
-    "LuisMarioBot": "parla sobre futbol",
-    "Turkobot": "t’ajuda a triar sèries turques",
-    "DeciBot": "t’ajuda a prendre decisions",
-    "Eco": "parla de futbol",
-    "Neobot": "parla sobre tennis",
-    "ArtBot": "parla sobre obres d’art",
-    "RumaBot": "parla sobre bàsquet",
-    "MisterMarlet": "parla sobre atletisme",
+    "ChatBotPy": "parlo sobre qualsevol cosa",
+    "FutBot": "parlo de futbol",
+    "Cabechat": "parlo sobre el bàsquet i és dels Warriors",
+    "Walter": "parlo sobre el Barça",
+    "Hades": "parlo sobre música del gènere urbà 2024",
+    "Thebot": "puc ampliar el teu coneixement sobre qualsevol religió",
+    "SantiBot": "t'ajudo amb teoria musical i composició",
+    "RossoX": "parlo sobre F1 i li agrada Ferrari",
+    "LuisMarioBot": "parlo sobre futbol",
+    "Turkobot": "t’ajudo a triar sèries turques",
+    "DeciBot": "t’ajudo a prendre decisions",
+    "Eco": "parlo de futbol",
+    "Neobot": "parlo sobre tennis",
+    "ArtBot": "parlo sobre obres d’art",
+    "RumaBot": "parlo sobre bàsquet",
+    "MisterMarlet": "parlo sobre atletisme",
 }
 
 # Crear l'aplicació
@@ -73,7 +73,7 @@ app.layout = html.Div([
 )
 def interact_with_chatbot(n_clicks, selected_bot, user_message):
     # Missatge de benvinguda i interacció
-    chatbot_response = f"{selected_bot} diu: Hola! {chatbots[selected_bot]}"
+    chatbot_response = f"{selected_bot} diu: Hola! Jo {chatbots[selected_bot]}"
     if user_message:
         chatbot_response += f"\nHas dit: '{user_message}'"
 
