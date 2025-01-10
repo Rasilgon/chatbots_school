@@ -69,4 +69,4 @@ def interact_with_chatbot(n_clicks, selected_bot, user_message):
 
 # Executar l'aplicació en mode local
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(debug=False)
